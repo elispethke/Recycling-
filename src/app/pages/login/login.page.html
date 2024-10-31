@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+ <div class="flex-center">
+<form [formGroup]="form">
+  <ion-card>
+    <img class="img-custom" alt="Slogam-reciclagem" src="assets/foto-reciclagem1.png" />
+    <ion-card-header >
+      <ion-card-title color="warning">Recycling</ion-card-title>
+      <ion-card-subtitle >Login</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ng-container *ngIf="form.get('email') as emailControl">
+        <app-error-message 
+          [field]="emailControl" 
+          error="required" 
+          message="Email required">
+        </app-error-message>
+        <app-error-message 
+          [field]="emailControl" 
+          error="email" 
+          message="Invalid email format">
+        </app-error-message>
+      </ng-container>
+  
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password"formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button class="custom-button" color="dark" fill="clear" size="full" (click)="forgotEmailPassowrd()" id="recoverPasswordButton" >Forgot email/password?</ion-button>
+      </ion-item>
+      <ion-button color="warning" expand="block" [disabled]="!form.valid"  (click) = "login()" >Login</ion-button> 
+      <ion-button color="warning" fill="clear" size="full" (click) = "register()">Register</ion-button> 
+      
+    </ion-card-content>
+  </ion-card>
+</form>
+ </div>
+</ion-content>

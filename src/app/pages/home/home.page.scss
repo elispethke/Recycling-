@@ -1,0 +1,26 @@
+ion-list{
+    padding: 7%;
+    box-shadow: o 3px 2px 3px rgb(0 0 0 / 40%);
+    .monay{
+        font-weight: bold;
+    }
+}
+ion-content{
+    --background: rgb(248, 246, 233);
+  }
+  ion-button{
+    padding: 10%;
+  }
+  ion-label h1{
+    margin-left: 10px;
+  }
+  ion-label p{
+    margin-left: 10px;
+  }
+  ion-avatar img{
+    width: 250%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  

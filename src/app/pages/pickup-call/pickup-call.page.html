@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>Pickup 
+      Call</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<img src="assets/mapa.png">
+<ion-card>
+  <ion-card-content>
+    <p>Address: Frankfurter Allee, 120</p>
+    <p>Post: 10247</p>
+    <p>Berlin</p>
+  </ion-card-content>
+</ion-card>
+<ion-list>
+  <ion-item lines="insert">
+<ion-label position="floating">Notes</ion-label>
+<ion-textarea></ion-textarea>
+  </ion-item>
+</ion-list>
+<ion-button color="warning" expand="block" size="" (click)="newPickupCall()">Creater Pickup Call
+</ion-button>
+</ion-content>
